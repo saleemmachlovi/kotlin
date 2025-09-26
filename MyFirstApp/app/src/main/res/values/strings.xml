@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My First App</string>
+    <string name="CounterText">The current counter value is : </string>
+    <string name="CounterNumber">0</string>
+    <string name="Increment">Increment</string>
+    <string name="Decrement">Decrement</string>
+    <string name="Reset">Reset</string>
+    <string name="Initial_Value">0</string>
+
+</resources>

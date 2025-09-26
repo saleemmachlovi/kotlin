@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/calculatorCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="16dp"
+        app:cardBackgroundColor="#F8FAFC"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="32dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title"
+                android:textColor="#1E293B"
+                android:textStyle="bold"
+                android:textSize="28sp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNumber1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_marginBottom="16dp"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxStrokeWidth="2dp"
+                app:hintTextColor="#6366F1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNumber1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hintNumber1"
+                    android:textColor="#1E293B"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:padding="16dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNumber2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxStrokeWidth="2dp"
+                app:hintTextColor="#6366F1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNumber2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hintNumber2"
+                    android:textColor="#1E293B"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:padding="16dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="2"
+                android:layout_marginBottom="24dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAdd"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:text="@string/plus"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="bold"
+                    app:backgroundTint="#10B981"
+                    app:cornerRadius="16dp"
+                    app:elevation="8dp"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMinus"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:text="@string/minus"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="bold"
+                    app:backgroundTint="#F59E0B"
+                    app:cornerRadius="16dp"
+                    app:elevation="8dp"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnMultiply"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:text="@string/multiply"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="bold"
+                    app:backgroundTint="#8B5CF6"
+                    app:cornerRadius="16dp"
+                    app:elevation="8dp"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDivide"
+                    android:layout_width="0dp"
+                    android:layout_height="64dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:text="@string/divide"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="bold"
+                    app:backgroundTint="#EF4444"
+                    app:cornerRadius="16dp"
+                    app:elevation="8dp"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+            </GridLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#F2F5F9"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tvResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/result"
+                    android:textColor="#475569"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:elevation="8dp"
+                    android:background="?android:attr/selectableItemBackground"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnClear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/clear"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                app:backgroundTint="#64748B"
+                app:cornerRadius="16dp"
+                app:elevation="6dp"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Calculator App</string>
+    <string name="title">Simple Calculator</string>
+    <string name="hintNumber1">Enter First Number </string>
+    <string name="hintNumber2">Enter First Second </string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="multiply">×</string>
+    <string name="divide">÷</string>
+    <string name="result">Result Will Appear Here</string>
+    <string name="clear">Clear All</string>
+    <string name="inputError">Please Enter Both Numbers</string>
+</resources>
